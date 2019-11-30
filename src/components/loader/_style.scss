@@ -1,0 +1,47 @@
+.loader-wrapper {
+  height: 167px;
+}
+
+.loader {
+  animation: load3 1.4s infinite linear;
+  background: linear-gradient(to right, $color-text 10%, rgba(255, 255, 255, 0) 42%);
+  border-radius: 50%;
+  font-size: 10px;
+  height: 9em;
+  margin: 10px auto;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  width: 9em;
+
+  &--isSmall {
+    height: 18px;
+    margin-bottom: 0;
+    width: 18px;
+  }
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: $color-text;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: $color-background;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

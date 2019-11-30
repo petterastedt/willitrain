@@ -1,0 +1,76 @@
+@import './assets/styles/animations';
+@import './assets/styles/variables';
+@import './components/header/style';
+@import './components/button/style';
+@import './components/location/style';
+@import './components/report/style';
+@import './components/search/style';
+@import './components/loader/style';
+@import './components/footer/style';
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $color-text;
+}
+
+.App {
+  align-items:  center;
+  background: $color-background;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: 16px;
+  min-height: calc(100vh);
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 $gutter-mobile;
+  position: relative;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    padding: 0 $gutter-desktop;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 68px;
+  text-align: center;
+}
+
+h1,
+.h1 {
+  font-size: 75px;
+  margin: 0;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    font-size: 100px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 32px;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    font-size: 48px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 28px;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    font-size: 36px;
+  }
+}

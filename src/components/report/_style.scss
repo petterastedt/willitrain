@@ -1,0 +1,29 @@
+.report {
+  animation: scaleFixedHeight 1s forwards;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 167px;
+
+  @media (min-width: $breakpoint-tablet) {
+      
+  }
+
+  &-content {
+    &--isAnimatedOut {
+      animation: fadeInLeftBig 0.5s forwards;
+      animation-direction: reverse;
+    }
+
+    &--isAnimatedIn {
+      animation: fadeInRightBig 0.5s forwards;
+    }
+  }
+
+  &-nextDay {
+    cursor: pointer;
+    padding-top: 5px;
+    text-align: center;
+  }
+}

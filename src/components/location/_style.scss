@@ -1,0 +1,29 @@
+.location {
+  &-title {
+    
+  }
+
+  &-pinWrapper {
+    position: relative;
+  }
+
+  &-pin {
+    border-radius: 50%;
+    border: 8px solid $color-text;
+    height: 8px;
+    left: -35px;
+    position: absolute;
+    width: 8px;
+  }
+
+  &-pin::after {
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 17px solid $color-text;
+    bottom: -30px;
+    content: '';
+    height: 0px;
+    left: -6px;
+    width: 0px;
+  }
+}

@@ -1,0 +1,35 @@
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+  transition: all 1s;
+
+  @media (min-width: $breakpoint-mobile-wide) {
+    margin-bottom: 50px;
+  }
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 480px;
+
+    @media (min-width: $breakpoint-mobile-wide) {
+      justify-content: flex-end;
+    }
+  }
+
+  &-icon {
+    height: 110px;
+    margin-bottom: -10px;
+    opacity: 0.3;
+    width: 110px;
+
+    @media (min-width: $breakpoint-mobile-wide) {
+      margin-bottom: -25px;
+    }
+  }
+
+  &-h1 {
+    animation: fadeInLeftBig 0.7s forwards;
+  }
+}
