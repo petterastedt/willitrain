@@ -4,7 +4,8 @@ import React from 'react'
   return (
     <div className="footer">
       <div className="footer-text">
-        This website is using <a href="https://www.metaweather.com" target="_blank" rel="noopener noreferrer">MetaWeather API</a> for the weather predictions, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Created by <a href="https://github.com/petterastedt" target="_blank" rel="noopener noreferrer" aria-label="github link">Petter Åstedt</a>.
+        This website is using <a href="https://www.metaweather.com" target="_blank" rel="noopener noreferrer" aria-label="link to metaweather api">MetaWeather API</a> for accurate weather predictions.
       </div>
     </div>
   )

@@ -23,6 +23,8 @@ function App() {
 
   const resetError = () => setError(null)
 
+  const resetValues = () => setWeatherReport(null)
+
   const getLocation = async () => {
     if (navigator.geolocation) {
       const hasPermission = await navigator.permissions.query({name:'geolocation'})
@@ -68,7 +70,7 @@ function App() {
   const getWeather = async (woeid, day) => {
     error && resetError()
     setLoadingWeather(true)
-    // setTimeout(async function (){ 
+
     const response = await api.fetchWeatherData(woeid)
 
     setLoadingWeather(false)
@@ -79,7 +81,6 @@ function App() {
     } else {
       setError("Something went wrong when fetching the weather data..")
     }
-  // }, 99000);
   }
 
   const getWeatherReport = (day, data) => {
@@ -89,21 +90,20 @@ function App() {
     else rainStatus = weatherData.consolidated_weather[day].weather_state_abbr
 
     const weatherReport = {
-      'sn': 'Its gonna snow today!',
-      'sl': 'Yuck, sleet today',
-      'h': 'Today it will hail, stay inside',
-      't': 'Yes, looks like theres a storm coming',
-      'hr': 'Yes, and lots of it',
-      'lr': 'Yes, might rain a little',
-      's': 'Yes, some showers',
-      'c': 'No, looks like its going to be a clear sky today',
-      'hc': 'No, lots of clouds though',
-      'lc': 'No, today looks fine, the report says light cloud',
-      'default': 'Yikes, something went wrong!'
+      'sn': 'It\'s gonna snow! 🌨️',
+      'sl': 'Yuck, sleet today 😖',
+      'h': 'It\'s gonna will hail! Stay inside! 😬',
+      't': 'Yes, looks like theres a storm coming ⛈️',
+      'hr': 'Yes, and lots of it ☔',
+      'lr': 'Yes, a little 🌧️',
+      's': 'Yes, some showers 🌦️',
+      'c': 'No, looks like it\'s going to be sunny 🌞',
+      'hc': 'No, lot\'s of clouds though ☁️',
+      'lc': 'No, looks fine, the report says light cloud 🌤️',
+      'default': 'Yikes, something went wrong! ❌'
     }
 
     setWeatherReport(weatherReport[rainStatus] || weatherReport['default'])
-    console.log(weatherReport[rainStatus])
   }
 
   return (
@@ -116,11 +116,12 @@ function App() {
           <Report
             getWeatherReport={getWeatherReport}
             weatherReport={weatherReport}
+            resetValues={() => resetValues()}
           />
         }
 
         { loadingWeather &&
-          <Loader />
+          <Loader/>
         }
 
         { location && !weatherReport && !loadingWeather &&

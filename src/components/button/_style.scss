@@ -1,6 +1,11 @@
 .button {
   animation: scale 1s forwards;
 
+  &--isClicked {
+    animation: scaleFixedHeight 0.3s forwards;
+    animation-direction: reverse;
+  }
+
   &-trigger {
     background: $color-background;
     border: 6px solid $color-text;

@@ -83,6 +83,10 @@
 .button {
   animation: scale 1s forwards; }
 
+.button--isClicked {
+  animation: scaleFixedHeight 0.3s forwards;
+  animation-direction: reverse; }
+
 .button-trigger {
   background: #283845;
   border: 6px solid #9ed997;
@@ -138,7 +142,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 167px; }
+  height: 110px; }
+
+.report-content {
+  max-width: 810px;
+  text-transform: uppercase; }
 
 .report-content--isAnimatedOut {
   animation: fadeInLeftBig 0.5s forwards;
@@ -147,10 +155,14 @@
 .report-content--isAnimatedIn {
   animation: fadeInRightBig 0.5s forwards; }
 
-.report-nextDay {
+.report-nextDay, .report-back {
   cursor: pointer;
-  padding-top: 5px;
+  padding-top: 10px;
   text-align: center; }
+
+.report-back {
+  animation: fadeIn 0.5s forwards 1.5s;
+  opacity: 0; }
 
 .search {
   height: 61px; }
@@ -188,12 +200,12 @@
 .search-loaderWrapper {
   pointer-events: none;
   position: absolute;
-  top: 31px;
+  top: 22px;
   right: -85px;
   width: 100%; }
 
 .loader-wrapper {
-  height: 167px; }
+  animation: fadeIn 0.7s forwards; }
 
 .loader {
   animation: load3 1.4s infinite linear;
@@ -263,7 +275,7 @@ a {
   min-height: calc(100vh);
   justify-content: center;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 15px 20px 0;
   position: relative; }
 
 @media (min-width: 1024px) {
@@ -278,7 +290,7 @@ a {
 
 h1,
 .h1 {
-  font-size: 75px;
+  font-size: 70px;
   margin: 0; }
 
 @media (min-width: 480px) {
