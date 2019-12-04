@@ -11,4 +11,4 @@ New functions are in the works but for now this is it 🙃
 
 - [x] ~~Basic functionallity~~
 - [ ] ~~Finish~~ Optimize styling and animations
-- [x] Deploy to Heroku / github pages
+- [x] ~~Deploy to Heroku / github pages~~
