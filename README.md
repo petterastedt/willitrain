@@ -1,4 +1,4 @@
-# ☔ willitrain.today:
+# ☔ willitrain.today
 See live preview at: https://petterastedt.github.io/willitrain 
 
 ## TODO:
