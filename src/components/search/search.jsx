@@ -37,7 +37,7 @@ export default function Search(props) {
           onChange={(e) => setSearchInput(e.target.value)}
           autoComplete="off"
         />
-        { loadingSearch &&
+        { loadingSearch && !props.error &&
           <div className="search-loaderWrapper">
             <Loader
               isSmall={true}

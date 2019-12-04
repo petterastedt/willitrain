@@ -47,6 +47,15 @@ a {
   text-align: center;
 }
 
+.error {
+  padding: 20px 0;
+
+  &--isBlinking {
+    animation: fadeIn .5s ease-in-out;
+    animation-iteration-count: 3;
+  }
+}
+
 h1,
 .h1 {
   font-size: 70px;

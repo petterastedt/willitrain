@@ -58,13 +58,8 @@ function App() {
 
     const locationData = await api.fetchLocationData(searchInputFormatted)
 
-    if (locationData === undefined || locationData.length === 0) {
-      setLocation([...location])
-      setError("Couldn't find location, try searching for a bigger city nearby")
-    }
-    else {
-      setLocation(locationData)
-    }
+    if (locationData === undefined || locationData.length === 0) setError("Couldn't find location, try searching for a bigger city nearby")
+    else setLocation(locationData)
   }
 
   const getWeather = async (woeid, day) => {
@@ -141,12 +136,13 @@ function App() {
         { location && !weatherReport && !loadingWeather &&
           <Search
             location={location}
+            error={error}
             resetError={resetError}
             searchLocation={searchLocation}
           />
         }
 
-        { error && <div>{error}</div> }
+        { error && <div className={`error ${error === "Couldn't find location, try searching for a bigger city nearby" && "error--isBlinking"}`}>{error}</div> }
       </div>
       <Footer />
     </div>

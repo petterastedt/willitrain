@@ -115,27 +115,6 @@
     height: 80px;
     width: 225px; } }
 
-.location-pinWrapper {
-  position: relative; }
-
-.location-pin {
-  border-radius: 50%;
-  border: 8px solid #9ed997;
-  height: 8px;
-  left: -35px;
-  position: absolute;
-  width: 8px; }
-
-.location-pin::after {
-  position: absolute;
-  border: 10px solid transparent;
-  border-top: 17px solid #9ed997;
-  bottom: -30px;
-  content: '';
-  height: 0px;
-  left: -6px;
-  width: 0px; }
-
 .report {
   animation: scaleFixedHeight 1s forwards;
   align-items: center;
@@ -287,6 +266,13 @@ a {
   flex-direction: column;
   margin-bottom: 68px;
   text-align: center; }
+
+.error {
+  padding: 20px 0; }
+
+.error--isBlinking {
+  animation: fadeIn .5s ease-in-out;
+  animation-iteration-count: 3; }
 
 h1,
 .h1 {
