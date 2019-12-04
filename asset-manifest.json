@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/willitrain/static/css/main.3c94b3b2.chunk.css",
+    "main.js": "/willitrain/static/js/main.a15ff859.chunk.js",
+    "main.js.map": "/willitrain/static/js/main.a15ff859.chunk.js.map",
+    "runtime-main.js": "/willitrain/static/js/runtime-main.e3bfa4b8.js",
+    "runtime-main.js.map": "/willitrain/static/js/runtime-main.e3bfa4b8.js.map",
+    "static/js/2.d815c448.chunk.js": "/willitrain/static/js/2.d815c448.chunk.js",
+    "static/js/2.d815c448.chunk.js.map": "/willitrain/static/js/2.d815c448.chunk.js.map",
+    "index.html": "/willitrain/index.html",
+    "precache-manifest.d8e174d026094b72b3c2ffc1814d5a82.js": "/willitrain/precache-manifest.d8e174d026094b72b3c2ffc1814d5a82.js",
+    "service-worker.js": "/willitrain/service-worker.js",
+    "static/css/main.3c94b3b2.chunk.css.map": "/willitrain/static/css/main.3c94b3b2.chunk.css.map",
+    "static/media/rainy.svg": "/willitrain/static/media/rainy.8b92f956.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3bfa4b8.js",
+    "static/js/2.d815c448.chunk.js",
+    "static/css/main.3c94b3b2.chunk.css",
+    "static/js/main.a15ff859.chunk.js"
+  ]
+}
