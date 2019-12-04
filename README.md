@@ -1,7 +1,8 @@
-# Will it rain today (under development):
+# ☔ willitrain.today:
+See live preview at: https://petterastedt.github.io/willitrain 
 
 ## TODO:
 
 - [x] ~~Basic functionallity~~
-- [ ] Finish styling and animations
-- [ ] Deploy to Heroku / github pages
+- [ ] ~~Finish~~ Optimize styling and animations
+- [x] Deploy to Heroku / github pages
