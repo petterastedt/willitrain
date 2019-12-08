@@ -27,12 +27,14 @@ function App() {
 
   const getLocation = async () => {
     if (navigator.geolocation) {
-      const hasPermission = await navigator.permissions.query({name:'geolocation'})
-      if (hasPermission.state !== "granted") setError("Please allow us to see your location")
-
+      // const hasPermission = await navigator.permissions.query({name:'geolocation'})
+      // if (hasPermission.state !== "granted") setError("Please allow us to see your location")
+      const givePermissionError = setTimeout(() => setError("Please allow us to see your location"), 3000);
+      
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           setError(null)
+          clearTimeout(givePermissionError)
           setLoadingLocation(true)
           const lat = position.coords.latitude.toFixed(10),
                 long = position.coords.longitude.toFixed(10)
