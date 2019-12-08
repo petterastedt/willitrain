@@ -11,7 +11,6 @@ import Footer from './components/footer/footer';
 
 function App() {
   const [loadingWeather, setLoadingWeather] = useState(false)
-  const [loadingLocation, setLoadingLocation] = useState(false)
   const [error, setError] = useState(null)
   const [weatherReport, setWeatherReport] = useState(null)
   const [weatherData, setWeatherData] = useState(null)
@@ -19,13 +18,13 @@ function App() {
 
   useEffect(() => {
     if (sessionStorage.length > 0) {
-    setTimeout(() => {
-      setLocation([{
-        title: sessionStorage.title,
-        woeid: sessionStorage.woeid
-      }])
-    }, 2000)
-    } else {
+      setTimeout(() => {
+        setLocation([{
+          title: sessionStorage.title,
+          woeid: sessionStorage.woeid
+        }])
+      }, 2000)
+   } else {
       getLocation()
     }
   }, [])

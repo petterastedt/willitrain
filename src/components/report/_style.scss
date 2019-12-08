@@ -6,10 +6,6 @@
   justify-content: center;
   height: 110px;
 
-  @media (min-width: $breakpoint-tablet) {
-
-  }
-
   &-content {
     max-width: $content-max-width;
     text-transform: uppercase;
