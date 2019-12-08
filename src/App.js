@@ -18,7 +18,16 @@ function App() {
   const [location, setLocation] = useState(null)
 
   useEffect(() => {
-    getLocation()
+    if (sessionStorage.length > 0) {
+    setTimeout(() => {
+      setLocation([{
+        title: sessionStorage.title,
+        woeid: sessionStorage.woeid
+      }])
+    }, 2000)
+    } else {
+      getLocation()
+    }
   }, [])
 
   const resetError = () => setError(null)
@@ -27,15 +36,12 @@ function App() {
 
   const getLocation = async () => {
     if (navigator.geolocation) {
-      // const hasPermission = await navigator.permissions.query({name:'geolocation'})
-      // if (hasPermission.state !== "granted") setError("Please allow us to see your location")
-      const givePermissionError = setTimeout(() => setError("Please allow us to see your location"), 3000);
-      
+      const givePermissionError = setTimeout(() => setError("Please allow us to see your location"), 4000)
+
       navigator.geolocation.getCurrentPosition(
         async (position) => {
-          setError(null)
           clearTimeout(givePermissionError)
-          setLoadingLocation(true)
+          setError("Getting your location..")
           const lat = position.coords.latitude.toFixed(10),
                 long = position.coords.longitude.toFixed(10)
 
@@ -43,7 +49,9 @@ function App() {
 
           if (!locationData) setError("Something went wrong when fetching your location.. (Weather API)")
           setLocation(locationData)
-          setLoadingLocation(false)
+          sessionStorage.title = locationData[0].title
+          sessionStorage.woeid = locationData[0].woeid
+          setError(null)
         },
         (error) => {
           setError("Something went wrong when fetching your location..(Location API)")
@@ -126,8 +134,6 @@ function App() {
             getWeather={() => getWeather(location[0].woeid, 0)}
           />
         }
-
-        { loadingLocation && <div>Getting your location..</div> }
 
         { location && !weatherReport && !loadingWeather &&
           <Location
