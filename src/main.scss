@@ -29,7 +29,7 @@ a {
   flex-direction: column;
   font-family: 'Boogaloo', cursive;
   font-size: 16px;
-  min-height: calc(100vh);
+  min-height: 100vh;
   justify-content: center;
   overflow: hidden;
   padding: 0 $gutter-mobile;

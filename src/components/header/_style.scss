@@ -1,11 +1,6 @@
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
-  transition: all 1s;
-
-  @media (min-width: $breakpoint-mobile-wide) {
-    margin-bottom: 40px;
-  }
 
   .iconWrapper {
     display: flex;

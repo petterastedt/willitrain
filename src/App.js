@@ -29,10 +29,6 @@ function App() {
     }
   }, [])
 
-  const resetError = () => setError(null)
-
-  const resetValues = () => setWeatherReport(null)
-
   const getLocation = async () => {
     if (navigator.geolocation) {
       const givePermissionError = setTimeout(() => setError("Please allow us to see your location"), 4000)
@@ -41,8 +37,8 @@ function App() {
         async (position) => {
           clearTimeout(givePermissionError)
           setError("Getting your location..")
-          const lat = position.coords.latitude.toFixed(10),
-                long = position.coords.longitude.toFixed(10)
+          const lat = position.coords.latitude.toFixed(10)
+          const long = position.coords.longitude.toFixed(10)
 
           const locationData = await api.fetchLocationData(lat, long)
 
@@ -64,7 +60,6 @@ function App() {
 
   const searchLocation = async (searchInput) => {
     const searchInputFormatted = searchInput.split(' ').join('+')
-
     const locationData = await api.fetchLocationData(searchInputFormatted)
 
     if (locationData === undefined || locationData.length === 0) setError("Couldn't find location, try searching for a bigger city nearby")
@@ -72,7 +67,7 @@ function App() {
   }
 
   const getWeather = async (woeid, day) => {
-    error && resetError()
+    error && setError(null)
     setLoadingWeather(true)
 
     const response = await api.fetchWeatherData(woeid)
@@ -96,14 +91,14 @@ function App() {
     const weatherReport = {
       'sn': 'It\'s gonna snow! 🌨️',
       'sl': 'Yuck, sleet today 😖',
-      'h': 'It\'s gonna will hail! Stay inside! 😬',
+      'h': 'It\'s gonna hail! Stay inside! 😬',
       't': 'Yes, looks like theres a storm coming ⛈️',
-      'hr': 'Yes, and lots of it ☔',
+      'hr': 'Yes, a lot ☔',
       'lr': 'Yes, a little 🌧️',
       's': 'Yes, some showers 🌦️',
-      'c': 'No, looks like it\'s going to be sunny 🌞',
-      'hc': 'No, lot\'s of clouds though ☁️',
-      'lc': 'No, looks fine, the report says light cloud 🌤️',
+      'c': 'No 🌞',
+      'hc': 'No, lots of clouds though ☁️',
+      'lc': 'No, looks fine 🌤️',
       'default': 'Yikes, something went wrong! ❌'
     }
 
@@ -120,7 +115,7 @@ function App() {
           <Report
             getWeatherReport={getWeatherReport}
             weatherReport={weatherReport}
-            resetValues={() => resetValues()}
+            resetValues={() => setWeatherReport(null)}
           />
         }
 
@@ -144,7 +139,7 @@ function App() {
           <Search
             location={location}
             error={error}
-            resetError={resetError}
+            resetError={() => setError(null)}
             searchLocation={searchLocation}
           />
         }
