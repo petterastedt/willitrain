@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/willitrain/static/css/main.1ce15668.chunk.css",
-    "main.js": "/willitrain/static/js/main.0c3d449b.chunk.js",
-    "main.js.map": "/willitrain/static/js/main.0c3d449b.chunk.js.map",
+    "main.js": "/willitrain/static/js/main.e0b8bdef.chunk.js",
+    "main.js.map": "/willitrain/static/js/main.e0b8bdef.chunk.js.map",
     "runtime-main.js": "/willitrain/static/js/runtime-main.e3bfa4b8.js",
     "runtime-main.js.map": "/willitrain/static/js/runtime-main.e3bfa4b8.js.map",
     "static/js/2.d815c448.chunk.js": "/willitrain/static/js/2.d815c448.chunk.js",
     "static/js/2.d815c448.chunk.js.map": "/willitrain/static/js/2.d815c448.chunk.js.map",
     "index.html": "/willitrain/index.html",
-    "precache-manifest.ffc48ac245adf734ab664bfe01a8f79b.js": "/willitrain/precache-manifest.ffc48ac245adf734ab664bfe01a8f79b.js",
+    "precache-manifest.10b587e39b2f255ddf99c5973e3e0e09.js": "/willitrain/precache-manifest.10b587e39b2f255ddf99c5973e3e0e09.js",
     "service-worker.js": "/willitrain/service-worker.js",
     "static/css/main.1ce15668.chunk.css.map": "/willitrain/static/css/main.1ce15668.chunk.css.map",
     "static/media/rainy.svg": "/willitrain/static/media/rainy.8b92f956.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e3bfa4b8.js",
     "static/js/2.d815c448.chunk.js",
     "static/css/main.1ce15668.chunk.css",
-    "static/js/main.0c3d449b.chunk.js"
+    "static/js/main.e0b8bdef.chunk.js"
   ]
 }
