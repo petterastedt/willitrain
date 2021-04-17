@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32cea4e72196e73744d171a5ed53fca9",
+    "revision": "c0431a642be0309392ada7703b18669c",
     "url": "/willitrain/index.html"
   },
   {
-    "revision": "af6da3a96f156ca3d7b7",
+    "revision": "5430823a4ae69c732602",
     "url": "/willitrain/static/css/main.1ce15668.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/willitrain/static/js/2.d815c448.chunk.js"
   },
   {
-    "revision": "af6da3a96f156ca3d7b7",
-    "url": "/willitrain/static/js/main.29ba02fd.chunk.js"
+    "revision": "5430823a4ae69c732602",
+    "url": "/willitrain/static/js/main.df670e46.chunk.js"
   },
   {
     "revision": "8a497bff22cbc2bc3ee9",
