@@ -2,7 +2,7 @@ export default {
 
   async fetchWeatherData(woeid) {
     try {
-      const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+      const proxyUrl = 'https://damp-sierra-82917.herokuapp.com/',
             targetUrl = `https://www.metaweather.com/api/location/${woeid}`
 
       const response = await fetch(proxyUrl + targetUrl)
@@ -16,7 +16,7 @@ export default {
 
   async fetchLocationData(param, param2) {
     try {
-      const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+      const proxyUrl = 'https://damp-sierra-82917.herokuapp.com/'
       let targetUrl
 
       if (param2) targetUrl = `https://www.metaweather.com/api/location/search/?lattlong=${param},${param2}`
